@@ -5,10 +5,9 @@ class HeaderComponent extends Component {
         super(props)
         this.state = {
 
-           
-
         }
     }
+    
    
     render() {
         return (
@@ -21,20 +20,17 @@ class HeaderComponent extends Component {
                 backgroundColor:'GrayText',
               }} >
             
-               
-                
                     <nav className="navbar navbar-expand-x1 navbar-dark bg-dark">
                     <div className="navbar-brand"> Temple Management System</div>
+                    
                   
         <ul class="navbar-nav ml-auto">
         <li class="nav-item">
       
         </li>
         </ul> 
-                    </nav> 
-                    
-              
-               
+            </nav>
+
             </div>
             
         );

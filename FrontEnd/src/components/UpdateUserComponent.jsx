@@ -12,11 +12,6 @@ class UpdateUserComponent extends Component {
             mobNo:'',
             adharNo:'',
             address:'',
-           
-          
-            
-
-          
 
         }
         this.changeNameHandler=this.changeNameHandler.bind(this);
@@ -42,21 +37,10 @@ class UpdateUserComponent extends Component {
        })
    }
 
-
-
-
-
-
-
-
-
     updateUser = (e) => {
-       
        
         e.preventDefault();
      
-       
-
         let user= {name: this.state.name,email: this.state.email, password: this.state.password, mobNo: this.state.mobNo, adharNo: this.state.adharNo, address: this.state.address}
         console.log('user =>'+JSON.stringify(user));
      
@@ -92,20 +76,6 @@ UserService.updateUser(user,this.state.id).then(res=>{
 
 
 
-  
-    
-     
-    
-
-
-
-
-
-
-
-
-   
- 
     render() {
         
      

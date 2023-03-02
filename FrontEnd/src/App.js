@@ -6,7 +6,8 @@ import HeaderComponent from './components/HeaderComponent';
 import FooterComponent from './components/FooterComponent';
 import LoginPageComponent from './components/LoginPageComponent';
 import CreateUserComponent from './components/CreateUserComponent';
-import UserActivities from './components/UserActivities';
+import DevoteeScope from './components/DevoteeScope';
+import TempleAdminScope from './components/TempleAdminScope';
 import BookEpassComponent from './components/BookEpassComponent';
 import ShowPassComponent from './components/ShowPassComponent';
 import pdf from './components/pdf';
@@ -31,7 +32,8 @@ function App() {
            <Route path="/" exact  component = {LoginPageComponent}></Route>
            <Route path="/user" component = {ListEpassComponent}></Route>
            <Route path="/add-user" component = {CreateUserComponent}></Route>
-           <Route path="/user-activities" component = {UserActivities}></Route>
+           <Route path="/devotee-scope" component = {DevoteeScope}></Route>
+           <Route path="/temple-admin-scope" component = {TempleAdminScope}></Route>
            <Route path="/book-Epass" component = {BookEpassComponent}></Route>
            <Route path="/show-pass" component = {ShowPassComponent}></Route>
            <Route path="/pdf" component={pdf}></Route>

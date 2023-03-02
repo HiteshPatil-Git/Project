@@ -69,14 +69,14 @@ class LoginPageComponent extends Component {
             res => {    
               
             console.log(res)
-           if(res.data.role === 'DEVOTEE'){
-            this.props.history.push('/user-activities');
-                        localStorage.setItem('res',res)  
-           }
-                        else{
-                          this.props.history.push('/user');
-                          localStorage.setItem('res',res)
-                        }
+           if(res.data.role == 'Devotee'){
+              this.props.history.push('/devotee-scope');
+              localStorage.setItem('res',res)  
+            }
+            else{
+                  this.props.history.push('/temple-admin-scope');
+                  localStorage.setItem('res',res)
+                }
           
             },
             error => {

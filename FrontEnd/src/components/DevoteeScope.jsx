@@ -12,9 +12,6 @@ class UserActivities extends Component {
         this.state = {
           
             id:''
-
-        
-
         }
         this.donation=this.donation.bind(this);
         this.bookEpass=this.bookEpass.bind(this);
@@ -24,6 +21,10 @@ class UserActivities extends Component {
     updateProfile(id){
         this.props.history.push(`/update/${id}`);
     }
+    logout = () => {
+        localStorage.clear();
+        window.location.href = "/";
+      }
     bookEpass(passId){
         this.props.history.push(`/book-Epass/${passId}`);
     }
@@ -69,24 +70,24 @@ class UserActivities extends Component {
      padding:'0',
      margin:'0',
    }} >
-
-
-           <p  align="right">   
-                   <button style={{marginRight:'10px'}} className="btn btn-primary" onClick={()=>this.updateProfile(this.state.id)}>Update Profile</button></p>
+           <p  align="right" >   
+                <button style={{marginRight:'10px'}} className="btn btn-primary" onClick={()=>this.updateProfile(this.state.id)}>Update Profile</button>
+                   
+                <button style={{marginRight:'10px'}} onClick={this.logout} className="btn btn-primary">Logout</button></p>
                   <div className="row flex-row flex-nowrap" style={{ marginLeft: '250px',  marginTop:'80px',}}>
         <div className="col-3">
-            <div className="card border border-warning shadow-0 mb-3" style={{maxWidth: "18rem"}}>  <button className="btn btn-primary" onClick={() => this.bookEpass()} >Book E-pass</button>
-            <div>
-                    <img   width="400" height="400" src={epass} ></img>
-                  
-                </div></div>
+            <div className="card border border-warning shadow-0 mb-3" style={{maxWidth: "10rem"}}>  <button className="btn btn-primary" onClick={() => this.bookEpass()} >Book-My-Darshan</button>
+                <div>
+                    <img   width="150" height="150" src={epass} ></img>
+                </div>
+            </div>
         </div>
-        <div className="col-3"  style={{   marginLeft: '240px',}}>
-            <div className="card border border-warning shadow-0 mb-3" style={{maxWidth: "18rem"}}>  <button className="btn btn-primary" onClick={this.donation}>Donation</button>
-            <div >
-                    <img  width="400" height="400" src={donation} ></img>
-                  
-                </div></div>
+        <div className="col-3"  style={{   marginLeft: '0px',}}>
+            <div className="card border border-warning shadow-0 mb-3" style={{maxWidth: "10rem"}}>  <button className="btn btn-primary" onClick={this.donation}>Donation</button>
+                <div >
+                    <img  width="150" height="150" src={donation} ></img>
+                </div>
+            </div>
         </div>
      
      
