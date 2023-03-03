@@ -56,7 +56,7 @@ class CreateUserComponent extends Component {
                 render={({ errors, status, touched }) => (
                     <Form style={{
                        
-                        marginTop:'100px',
+                        marginTop:'40px',
                         overflow:'hidden',
                         marginLeft: '300px',
                         marginRight:'300px',

@@ -12,6 +12,7 @@ import BookEpassComponent from './components/BookEpassComponent';
 import ShowPassComponent from './components/ShowPassComponent';
 import pdf from './components/pdf';
 import UpdateUserComponent from './components/UpdateUserComponent';
+import UpdateTimeSlotComponent from './components/UpdateTimeSlotComponent';
 import DonationComponent from './components/DonationComponent';
 import DonationSlipComponent from './components/DonationSlipComponent';
 import DonationPdfComponent from './components/DonationPdfComponent';
@@ -38,6 +39,7 @@ function App() {
            <Route path="/show-pass" component = {ShowPassComponent}></Route>
            <Route path="/pdf" component={pdf}></Route>
            <Route path="/update/:id" component = {UpdateUserComponent}></Route>
+           <Route path="/update-time-slot" component = {UpdateTimeSlotComponent}></Route>
            <Route path="/donation" component = {DonationComponent}></Route>
            <Route path="/donation-details" component = {DonationSlipComponent}></Route>
            <Route path="/donation-pdf" component = {DonationPdfComponent}></Route>

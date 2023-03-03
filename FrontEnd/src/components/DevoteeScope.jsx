@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import back2 from '../images/back2.jpg'
 import donation from '../images/donation.png';
-import epass from '../images/epass.png'
+import book from '../images/book.png'
+import book2 from '../images/book2.png'
+import book3 from '../images/book3.png'
 import back3 from '../images/back3.jpg'
 import swastik2 from '../images/swastik2.jpg'
 import back6 from '../images/back6.jpg'
@@ -70,15 +72,31 @@ class UserActivities extends Component {
      padding:'0',
      margin:'0',
    }} >
-           <p  align="right" >   
-                <button style={{marginRight:'10px'}} className="btn btn-primary" onClick={()=>this.updateProfile(this.state.id)}>Update Profile</button>
-                   
-                <button style={{marginRight:'10px'}} onClick={this.logout} className="btn btn-primary">Logout</button></p>
-                  <div className="row flex-row flex-nowrap" style={{ marginLeft: '250px',  marginTop:'80px',}}>
+
+        <p  align="right" >                   
+        <button style={{marginRight:'10px'}} onClick={this.logout} className="btn btn-primary">Logout</button></p>
+        <div className="row flex-row flex-nowrap" style={{ marginLeft: '0px',  marginTop:'80px',}}>
+        
+        <div className="col-3"  style={{   marginLeft: '0px',}}>
+            <div className="card border border-warning shadow-0 mb-3" style={{maxWidth: "10rem"}}>  <button className="btn btn-primary" onClick={()=>this.updateProfile(this.state.id)}>Update Profile</button>
+                <div >
+                    <img  width="150" height="150" src={book3} ></img>
+                </div>
+            </div>
+        </div>
+        
+
         <div className="col-3">
             <div className="card border border-warning shadow-0 mb-3" style={{maxWidth: "10rem"}}>  <button className="btn btn-primary" onClick={() => this.bookEpass()} >Book-My-Darshan</button>
                 <div>
-                    <img   width="150" height="150" src={epass} ></img>
+                    <img   width="150" height="150" src={book} ></img>
+                </div>
+            </div>
+        </div>
+        <div className="col-3"  style={{   marginLeft: '0px',}}>
+            <div className="card border border-warning shadow-0 mb-3" style={{maxWidth: "10rem"}}>  <button className="btn btn-primary" onClick={this.donation}>Bookings</button>
+                <div >
+                    <img  width="150" height="150" src={book2} ></img>
                 </div>
             </div>
         </div>
@@ -88,8 +106,8 @@ class UserActivities extends Component {
                     <img  width="150" height="150" src={donation} ></img>
                 </div>
             </div>
-        </div>
-     
+        </div>      
+        
      
     </div>
     </div> 

@@ -24,6 +24,10 @@ class UpdateUserComponent extends Component {
       
       
     }
+    logout = () => {
+        localStorage.clear();
+        window.location.href = "/";
+      }
 
    componentDidMount(){
        UserService.getUserById(this.state.id).then( (res)=>{
@@ -77,10 +81,15 @@ UserService.updateUser(user,this.state.id).then(res=>{
 
 
     render() {
+
+        
         
      
         return (
             <div>
+
+            <p  align="right" >                   
+            <button style={{marginRight:'10px'}} onClick={this.logout} className="btn btn-primary">Logout</button></p>
  
 <div className="container">
               

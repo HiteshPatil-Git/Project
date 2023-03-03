@@ -4,6 +4,10 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 class DonationComponent extends Component {
   
+    logout = () => {
+        localStorage.clear();
+        window.location.href = "/";
+      }
     render() {
         return (
             <Formik
@@ -50,7 +54,12 @@ class DonationComponent extends Component {
                         this.props.history.push('/donation-pdf');
                     })
                 }}
+
+                
                 render={({ errors, status, touched }) => (
+
+
+                    
                   
                     <Form style={{
                        
@@ -61,6 +70,9 @@ class DonationComponent extends Component {
                         padding:'0',
                        
                       }}>
+                        <p  align="right" >                   
+                        <button style={{marginRight:'10px'}} onClick={this.logout} className="btn btn-primary">Logout</button></p>
+            
                           <h3 className="text-center">Payment Details </h3>
 
                           <div className="form-group">
@@ -103,7 +115,9 @@ class DonationComponent extends Component {
                         <div className="form-group">
                         <button type="submit" className="btn btn-primary mr-2">Register</button>
                         </div>
+                        
                     </Form>
+                    
                 )}
             />
         )

@@ -16,7 +16,10 @@ class DonationSlipComponent extends Component {
  
     }
    
-
+    logout = () => {
+        localStorage.clear();
+        window.location.href = "/";
+      }
 
  
     

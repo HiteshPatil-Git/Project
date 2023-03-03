@@ -16,6 +16,11 @@ class ListEpassComponent extends Component {
         this.deleteEpass=this.deleteEpass.bind(this);
     }
 
+    logout = () => {
+        localStorage.clear();
+        window.location.href = "/";
+      }
+
     componentDidMount(){
         EpassService.getEpass().then((res)=>{
             this.setState({ epass : res.data})

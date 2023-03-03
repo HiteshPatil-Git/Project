@@ -14,18 +14,17 @@ class ShowPassComponent extends React.Component {
              
                 epass:{},
                 userd:{}
-            
-                
-    
-             
-    
+   
             }
      
         }
        
     
 
-     
+        logout = () => {
+            localStorage.clear();
+            window.location.href = "/";
+          }
         
 componentDidMount(){
             const userData=localStorage.getItem('pass');
